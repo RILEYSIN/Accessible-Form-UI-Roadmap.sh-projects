@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #faedcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  padding: 30px;
+  background: #d4a373;
+  width: 800px;
+  gap: 40px;
+}
+
+form {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #fefae0;
+  width: 100%;
+}
+
+input.error {
+  border-color: red;
+  color: red;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+}
+
+.password-wrapper button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.update-btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-circle {
+  width: 80px;
+  height: 80px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profile-status {
+  text-align: center;
+}
+
+.profile-status ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.profile-status li {
+  margin: 4px 0;
+  color: #555;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #999;
+}

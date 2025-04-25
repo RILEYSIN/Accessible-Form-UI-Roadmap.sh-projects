@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          placeholder="What should we call you?"
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Riley@gmail.com"
+          class="error"
+        />
+        <span class="error-text">Email is already taken</span>
+
+        <label for="password">Enter Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="xxxxxxxx" />
+          <button type="button" onclick="togglePassword('password')">👁</button>
+        </div>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="password-wrapper">
+          <input type="password" id="confirmPassword" placeholder="xxxxxxxx" />
+          <button type="button" onclick="togglePassword('confirmPassword')">
+            👁
+          </button>
+        </div>
+
+        <button type="submit" class="update-btn">Update Profile</button>
+      </form>
+
+      <div class="profile-sidebar">
+        <div class="progress-circle">
+          <div class="circle">65%</div>
+        </div>
+        <div class="profile-status">
+          <p>Profile Completeness</p>
+          <ul>
+            <li class="done">Create Account</li>
+            <li class="done">Update Roadmap Progress</li>
+            <li class="done">Setup Public Profile</li>
+            <li>Complete your first project</li>
+            <li>Invite your Friends</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePassword(id) {
+        const input = document.getElementById(id);
+        const button = input.nextElementSibling;
+        if (input.type === "password") {
+          input.type = "text";
+          button.textContent = "🙈";
+        } else {
+          input.type = "password";
+          button.textContent = "👁";
+        }
+      }
+    </script>
+  </body>
+</html>
